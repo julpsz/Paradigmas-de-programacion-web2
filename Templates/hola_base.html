@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+
+{% block content %}
+{% if nombre == "Julian" %}
+<h1>Hola GENIO !!</h1>
+{% else %}
+<h1>Hola {{nombre}}</h1>
+{% endif%}
+
+<a href="{{ url_for("index") }}">Home</a>
+<a href="{{ url_for("about") }}">Sobre nosotros</a>
+
+<form action = "{{ url_for("plantilla") }}" method="POST">
+	Nombre:
+	<input type="text" name="firstname"><br>
+	Apellido
+	<input type="text" name="lastname"><br>
+	<input type="submit" value="Enviar">
+</form>
+
+{% for recorrer in cosas %}
+<h2>{{recorrer}}</h2>
+{% endfor %}
+{% endblock %}
+
+
+{% block titulo %}
+Mi APP
+{% endblock %}

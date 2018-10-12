@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+{% if nombre == "Julian" %}
+<h1>Hola GENIO !!</h1>
+{% else %}
+<h1>Hola {{nombre}}</h1>
+{% endif%}
+
+{% for recorrer in cosas %}
+<h2>{{recorrer}}</h2>
+{% endfor %}
